@@ -1411,6 +1411,7 @@ GameObject:
   - component: {fileID: 1077910158}
   - component: {fileID: 1077910161}
   - component: {fileID: 1077910162}
+  - component: {fileID: 1077910163}
   m_Layer: 5
   m_Name: Hint Text
   m_TagString: Untagged
@@ -1450,6 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 88de2c478d38fa04b8cc09836cbb52e5, type: 2}
+  _text: {fileID: 1077910159}
 --- !u!114 &1077910159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1606,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &1077910163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077910156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f5279e46dd9b946a235db1b76706eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - {fileID: 11400000, guid: 40e952b19d50d9c49b620d8817e175ad, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1077910158}
+        m_MethodName: FadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1178923456
 PrefabInstance:
   m_ObjectHideFlags: 0
