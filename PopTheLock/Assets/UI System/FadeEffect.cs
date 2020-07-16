@@ -8,14 +8,14 @@ public class FadeEffect : MonoBehaviour
 {
     public static IEnumerator FadeTMP_Text(TMP_Text textMeshPro, float startAlpha, float endAlpha, float duration)
     {
-        var startTime = Time.time;
-        var endTime = Time.time + duration;
+        var startTime = Time.fixedTime;
+        var endTime = Time.fixedTime + duration;
 
         textMeshPro.alpha = startAlpha;
 
-        while (Time.time <= endTime)
+        while (Time.fixedTime <= endTime)
         {
-            var elapsedTime = Time.time - startTime;
+            var elapsedTime = Time.fixedTime - startTime;
             var percentage = 1 / (duration / elapsedTime);
 
             if (startAlpha > endAlpha) //fading out/down 
