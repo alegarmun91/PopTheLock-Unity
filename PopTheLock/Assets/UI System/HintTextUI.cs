@@ -10,6 +10,8 @@ public class HintTextUI : MonoBehaviour
 
     public void FadeOut()
     {
+        if (gameData.currentLevel != 1) return;
+        
         StartCoroutine(FadeEffect.FadeTMP_Text(_text, _text.alpha, 0f, 1f));
     }
 }
