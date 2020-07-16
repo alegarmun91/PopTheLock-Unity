@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class HintTextUI : MonoBehaviour
 {
     public GameData gameData;
-    private TMP_Text _text;
+    public TMP_Text _text;
 
-    private void Update()
+    public void FadeOut()
     {
-        gameObject.SetActive(gameData.currentLevel <= 1);
+        StartCoroutine(FadeEffect.FadeTMP_Text(_text, _text.alpha, 0f, 1f));
     }
 }
