@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 88de2c478d38fa04b8cc09836cbb52e5, type: 2}
+  lockAnimator: {fileID: 874856989}
   onWinEvent: {fileID: 11400000, guid: 2ceed1d06e5638b47b0d1588a66d89cf, type: 2}
 --- !u!4 &761264538
 Transform:
@@ -709,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761264536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.70947456, y: 0.34854144, z: -0.85546875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

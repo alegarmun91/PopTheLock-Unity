@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameData gameData;
+    public Animator lockAnimator;
     public GameEvent onWinEvent;
 
     private bool _isFirstTap = true;
@@ -22,11 +23,17 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) && !gameData.IsRunning && _isFirstTap)
-        {
-            gameData.IsRunning = true;
-            _isFirstTap = false;
-        }
+        if (!(lockAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) || !_isFirstTap)
+            return;
+        
+        if(Input.GetMouseButtonUp(0) && !gameData.IsRunning)
+            StartTry();
+    }
+
+    private void StartTry()
+    {
+        gameData.IsRunning = true;
+        _isFirstTap = false;
     }
 
     public void DecrementRemainingDots()
@@ -66,6 +73,7 @@ public class GameManager : MonoBehaviour
 
     private void SetNewRun()
     {
+        StopGame();
         gameData.ResetRunData();
     }
 }
